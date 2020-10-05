@@ -148,7 +148,8 @@ function main() : void{
 		[
 			'git' => $gitHash
 		],
-		<<<'STUB'
+		// The shebang line must always be LF-terminated
+		"#!/usr/bin/env php\n" . <<<'STUB'
 <?php
 
 $tmpDir = sys_get_temp_dir();
