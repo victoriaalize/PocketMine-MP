@@ -209,6 +209,9 @@ class Fire extends Flowable{
 						continue;
 					}
 
+					if(!$world->isChunkLoaded(($this->pos->x + $x) >> 4, ($this->pos->z + $z) >> 4)){
+						continue;
+					}
 					$block = $world->getBlockAt($this->pos->x + $x, $this->pos->y + $y, $this->pos->z + $z);
 					if($block->getId() !== BlockLegacyIds::AIR){
 						continue;
